@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './pizza-header.js';
+import ImageHeader from './imgheader.js'
 import './App.css';
+
+const assets = [
+  '../assets/logo.jpg',
+  '../assets/fb-icon.jpg',
+  '../assets/twit-icon.jpg',
+  '../assets/gp-icon.jpg"',
+  '../assets/insta-icon.jpg',
+  '../assets/flic-icon.jpg',
+  '../assets/pint-icon (1).jpg',
+  '../assets/rss-icon.jpg',
+  '../assets/mail-icon.jpg'
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          FART <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header src={assets.map(photo => {
+        return photo
+      })} />
+      <ImageHeader />
     </div>
   );
 }
