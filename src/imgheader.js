@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 class Img extends Component {
     render() {
         return (
-            <img id="printer" src="../public/assets/print-icon.jpg" alt="randomBS"/>
+            <img id="printer" src="assets/print-icon.jpg" alt="randomBS"/>
         )
     }
 }
@@ -21,7 +21,7 @@ class H3 extends Component {
 class PostDate extends Component {
     render() {
         return (
-           <h3 id="post-date">POSTED ON 15 DEC 2013 / DESSERTS</h3>
+           <h3 id={this.props.toot}>POSTED ON 15 DEC 2013 / DESSERTS</h3>
         )
     }
 }
@@ -41,7 +41,7 @@ export default class Imgheader extends Component {
             <hgroup id="article-heading">
                 <ArticleTitle />
                 <div id="greyArea">
-                    <PostDate />
+                    <PostDate toot="post-date" />
                     <div>
                         <Img />
                         <H3 />
